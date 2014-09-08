@@ -1,19 +1,19 @@
  /************************************************************************
-   Program: Cookie
+   Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
-   Class:
+   Class: person
    Instructor:
-   Date: 9 April 2012
-   Description:    (program requirements)
-   Input: cookie.txt
-   Output: report.txt
+   Date: 7 September 2014
+   Description:
+   Input:
+   Output: 
    Compilation instructions:
    Usage:
    Known bugs/missing features:
    
-   This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
-   Unported License. To view a copy of this license, visit 
-   http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative 
+   This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 
+   International Public License. To view a copy of this license, visit 
+   https://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative 
    Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
    
    Modifications:
