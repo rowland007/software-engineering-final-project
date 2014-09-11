@@ -19,10 +19,9 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
- ************************************************************************/
+ ************************************************************************
 #pragma once
 #include "person.h"
-#include <ctime>
 
 class employee :
 	public person
@@ -37,9 +36,5 @@ public:
 	virtual void printFullName() const;
 private:
 	int idNum;
-	struct hireDate{
-		int tm_year;
-		int tm_month;
-		int tm_mday;
-	}
 };
+*/

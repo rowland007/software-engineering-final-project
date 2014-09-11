@@ -19,13 +19,14 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
- ************************************************************************/
+ ************************************************************************
 #include "employee.h"
 
-employee::employee(void)
+employee::employee(const string &, const string &)
 {
 }
 
 employee::~employee(void)
 {
 }
+*/

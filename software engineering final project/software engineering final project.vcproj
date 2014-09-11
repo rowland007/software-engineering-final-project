@@ -166,6 +166,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\main.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\person.cpp"
 				>
 			</File>
@@ -181,6 +185,10 @@
 			</File>
 			<File
 				RelativePath=".\person.h"
+				>
+			</File>
+			<File
+				RelativePath=".\userInterface.h"
 				>
 			</File>
 		</Filter>
