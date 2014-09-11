@@ -19,6 +19,8 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
+10SEP2014  Constructor now passes to person constructor.
+		   Added virtual method functionality.
  ************************************************************************/
 #include <iostream>
 #include "employee.h"
