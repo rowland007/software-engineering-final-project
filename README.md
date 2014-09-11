@@ -10,21 +10,28 @@ The goal of this project is to both create a good solution and to employ as many
 
 ###Design
 (10) Provide a UML class diagram that includes all the classes in this project (you may want to do additional research on the Web to get all the representation information). 
+
 (10) Within the restrictions of a text-based system, provide an intuitive, easy-to-use interface.  Include in your Word document a short explanation of your design choices.
 
 ###Implementation
 (5) A naming model is adopted and employed for every programmer-named file.
+
 (5) A reasonable comment style is specified and consistently followed.
 
 ###Coding/Feature Inclusion
 (15) System allows regular employees, secure employees, support employees, and clients to be entered into the system, retrieved individually by employee or client number, and displayed in bulk.
+
 (15) Internally, employees and clients are objects; clients and employees inherit from an abstract base person class; specialized employees inherit from the base employee type.
+
 (5) Employees and clients are stored in a structure without a built-in maximum size (e.g., a linked list and not an array).
+
 (10) System assigns employees to divisions and can list all employees in a particular division, and the division supervisor.
+
 (5) User can designate and display employee's hiring level (e.g., provisional).
 
 ###Testing
 (5) Provide documentation of basic pass/fail testing for all modules.  Specific methodology is up to you, and can be done with or without including the unit testing technique.
+
 (10) Find a fellow programmer (not another student taking this course!) who will review your code and document the results.
 
 ###Tracking
