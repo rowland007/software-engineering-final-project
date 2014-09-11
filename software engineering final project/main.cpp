@@ -1,5 +1,6 @@
 #include <iostream>
 #include "userInterface.h"
+#include "person.h"
 
 using namespace std;
 

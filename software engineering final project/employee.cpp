@@ -19,14 +19,19 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
- ************************************************************************
+ ************************************************************************/
+#include <iostream>
 #include "employee.h"
 
-employee::employee(const string &, const string &)
+employee::employee(const string &first, const string &last) : person(first, last)
 {
 }
 
 employee::~employee(void)
 {
 }
-*/
+
+void employee::printFullName() const
+{
+	cout << person::getLastName() << ", " << person::getLastName() << endl;
+}

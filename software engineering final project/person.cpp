@@ -19,7 +19,7 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
- ************************************************************************
+ ************************************************************************/
 #include "person.h"
 
 person::person(const string &first, const string &last):firstName(first), lastName(last)
@@ -49,4 +49,3 @@ string person::getLastName() const
 person::~person(void)
 {
 }
-*/

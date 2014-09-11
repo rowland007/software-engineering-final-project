@@ -19,12 +19,11 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
- ************************************************************************
+ ************************************************************************/
 #pragma once
 #include "person.h"
 
-class employee :
-	public person
+class employee : public person
 {
 public:
 	employee(const string &, const string &);
@@ -37,4 +36,3 @@ public:
 private:
 	int idNum;
 };
-*/
