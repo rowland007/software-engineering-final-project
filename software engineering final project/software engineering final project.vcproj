@@ -177,6 +177,10 @@
 				RelativePath=".\Person.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\SpecializedEmployee.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -193,6 +197,10 @@
 			</File>
 			<File
 				RelativePath=".\Person.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SpecializedEmployee.h"
 				>
 			</File>
 			<File

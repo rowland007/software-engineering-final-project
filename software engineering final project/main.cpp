@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Client.h"
+#include "SpecializedEmployee.h"
 
 using namespace std;
 
@@ -8,22 +8,46 @@ void pause();
 
 int main()
 {	
-	string c_id;
+	int c_id;
 	string c_firstName;
 	string c_lastName;
+	const long long int PHONE_NUMBER = 6053903658;
+	const int SECURITY_LEVEL = 5;
 
-	cout << "Create Client! Enter ID Num: ";
+	cout << "Create Employee! Enter ID Num: ";
 	cin >> c_id;
 	cout << "Enter First Name: ";
 	cin >> c_firstName;
 	cout << "Enter Last Name: ";
 	cin >> c_lastName;
 
-	Client client(c_firstName, c_lastName);
-	client.setClientID(c_id);
+	SpecializedEmployee employee(c_firstName, c_lastName);
+	employee.setIdNum(c_id);
 
 	cout << "Is this correct?" << endl;
-	client.printFullName();
+	employee.printFullName();
+
+	employee.setIsDivisionSupervisor(true);
+	employee.setIsSecureEmployee(true);
+	employee.setIsSupportEmployee(true);
+
+	employee.setPhoneNumber(PHONE_NUMBER);
+	employee.setSecurityLevel(SECURITY_LEVEL);
+
+	if(employee.getIsDivisionSupervisor())
+	{
+		cout << "Is a Division Supervisor!" << endl;
+	}
+	if(employee.getIsSecureEmployee())
+	{
+		cout << "Is a Secure Employee!" << endl;
+		cout << "Security Level: " << employee.getSecurtiyLevel() << endl;
+	}
+	if(employee.getIsSupportEmployee())
+	{
+		cout << "Is a Support Employee!" << endl;
+		cout << "Phone Number: " << employee.getPhoneNumber() << endl;
+	}
 
 	pause();
 	return 0;
