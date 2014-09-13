@@ -1,10 +1,13 @@
  /************************************************************************
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
-   Class: employee
+   Class: Employee
    Instructor:
    Date: 7 September 2014
-   Description:
+   Description:	Class to create an employee inherited from the Person class.
+				This will give you First Name, Last Name, an Employee ID
+				Number, and a hire date.  Virtual function is overriden to
+				provide: "ID Num  LastName, FirstName".
    Input:
    Output: 
    Compilation instructions:
@@ -19,20 +22,26 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
+13SEP2014	Modified class variable to follow coding guidelines.
+			Added hireDate variable and methods.
+			Made both variables unsigned.
  ************************************************************************/
 #pragma once
-#include "person.h"
+#include "Person.h"
 
-class employee : public person
+class Employee : public Person
 {
 public:
-	employee(const string &, const string &);
+	Employee(const string &, const string &);
 	void setIdNum(int);
 	int getIdNum() const;
-	~employee(void);
+	void setHireDate(int);
+	int getHireDate() const;
+	~Employee(void);
 	
 	//Virtual functions to be overriden
 	virtual void printFullName() const;
 private:
-	int idNum;
+	unsigned int idNum_;
+	unsigned int hireDate_;
 };

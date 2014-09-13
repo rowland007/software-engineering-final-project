@@ -162,7 +162,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\employee.cpp"
+				RelativePath=".\Employee.cpp"
 				>
 			</File>
 			<File
@@ -170,7 +170,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\person.cpp"
+				RelativePath=".\Person.cpp"
 				>
 			</File>
 		</Filter>
@@ -180,15 +180,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\employee.h"
+				RelativePath=".\Employee.h"
 				>
 			</File>
 			<File
-				RelativePath=".\person.h"
+				RelativePath=".\Person.h"
 				>
 			</File>
 			<File
-				RelativePath=".\userInterface.h"
+				RelativePath=".\UserInterface.h"
 				>
 			</File>
 		</Filter>

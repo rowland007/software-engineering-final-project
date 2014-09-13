@@ -1,10 +1,14 @@
  /************************************************************************
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
-   Class: person
+   Class: Person
    Instructor:
    Date: 7 September 2014
-   Description:
+   Description:	This class creates objects that will hold the first and 
+				last name of a person. Also includes a virtual function
+				that will allow you to print the name of the person.
+				Needs to be overwritten so you can choose First Last or
+				Last, First.				
    Input:
    Output: 
    Compilation instructions:
@@ -19,33 +23,71 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
+13SEP2014	Completed comments.
+			Modified the class variable names to follow coding guideline standards.
  ************************************************************************/
-#include "person.h"
+#include "Person.h"
 
-person::person(const string &first, const string &last):firstName(first), lastName(last)
+ /************************************************************************
+   Function: Person()
+   Author: Randall D. Rowland Jr.
+   Description:	Constructor that takes two parameters and assigns them to
+				the class variables.
+   @param	first	The actual value to be stored in the class variable.
+   @param	last	The actual value to be stored in the class variable.
+         
+ ************************************************************************/
+Person::Person(const string &first, const string &last) : firstName_(first), lastName_(last)
 {
 }
 
-void person::setFirstName(const string &first)
+ /************************************************************************
+   Function: setFirstName()
+   Author: Randall D. Rowland Jr.
+   Description: Assigns the value from the parameter to the class variable.
+   @param	first	The actual value to be stored in the class variable.    
+ ************************************************************************/
+void Person::setFirstName(const string &first)
 {
-	firstName = first;
+	firstName_ = first;
 }
 
-string person::getFirstName() const
+ /************************************************************************
+   Function: getFirstName()
+   Author: Randall D. Rowland Jr.
+   Description: Returns the value stored within the class variable.         
+ ************************************************************************/
+string Person::getFirstName() const
 {
-	return firstName;
+	return firstName_;
 }
 
-void person::setLastName(const string &last)
+ /************************************************************************
+   Function: setLastName()
+   Author: Randall D. Rowland Jr.
+   Description: Assigns the value from the parameter to the class variable.
+   @param	last	The actual value to be stored in the class variable.			     
+ ************************************************************************/
+void Person::setLastName(const string &last)
 {
-	lastName = last;
+	lastName_ = last;
 }
 
-string person::getLastName() const
+ /************************************************************************
+   Function: getLastName()
+   Author: Randall D. Rowland Jr.
+   Description: Returns the value stored within the class variable.     
+ ************************************************************************/
+string Person::getLastName() const
 {
-	return lastName;
+	return lastName_;
 }
 
-person::~person(void)
+ /************************************************************************
+   Function: ~Person()
+   Author: Randall D. Rowland Jr.
+   Description: Auto-generated destructor.      
+ ************************************************************************/
+Person::~Person(void)
 {
 }

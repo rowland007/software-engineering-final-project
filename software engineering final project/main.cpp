@@ -1,50 +1,32 @@
 #include <iostream>
-#include "userInterface.h"
-#include "person.h"
+#include <string>
+#include "UserInterface.h"
+#include "Employee.h"
 
 using namespace std;
 
 void pause();
-//Function Declaration, You Cannot Declare Attributes Without This
 
 int main()
-{
-	mainMenu();
+{	
+	unsigned int e_id;
+	string e_firstName;
+	string e_lastName;
+
+	cout << "Create Employee! Enter ID Num: ";
+	cin >> e_id;
+	cout << "Enter First Name: ";
+	cin >> e_firstName;
+	cout << "Enter Last Name: ";
+	cin >> e_lastName;
+
+	Employee employee(e_firstName, e_lastName);
+	employee.setIdNum(e_id);
+
+	cout << "Is this correct?" << endl;
+	employee.printFullName();
 
 	pause();
-	clearScreen();
-
-	searchEmployeeMenu();
-	
-	pause();
-	clearScreen();
-
-	searchEmployeeByID();
-
-	pause();
-	clearScreen();
-
-	viewAllEmployees();
-
-	pause();
-	clearScreen();
-
-	searchClientMenu();
-
-	pause();
-	clearScreen();
-
-	searchClientByID();
-
-	pause();
-	clearScreen();
-
-	viewAllClients();
-
-	pause();
-	clearScreen();
-	pause();
-
 	return 0;
 }
 

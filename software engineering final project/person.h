@@ -1,10 +1,14 @@
  /************************************************************************
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
-   Class: person
+   Class: Person
    Instructor:
    Date: 7 September 2014
-   Description:
+   Description:	This class creates objects that will hold the first and 
+				last name of a person. Also includes a virtual function
+				that will allow you to print the name of the person.
+				Needs to be overwritten so you can choose First Last or
+				Last, First.
    Input:
    Output: 
    Compilation instructions:
@@ -25,23 +29,20 @@
 #include <string>
 using namespace std;
 
-class person
+class Person
 {
 public:
-	person(const string &, const string &);
-
+	Person(const string &, const string &);
 	void setFirstName(const string &);
 	string getFirstName() const;
-
 	void setLastName(const string &);
 	string getLastName() const;
-
-	~person(void);
-
+	~Person(void);
+	
 	//virtual function
 	virtual void printFullName() const = 0;
 
 private:
-	string firstName;
-	string lastName;
+	string firstName_;
+	string lastName_;
 };
