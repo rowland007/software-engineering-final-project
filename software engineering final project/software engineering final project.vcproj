@@ -166,6 +166,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Division.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Employee.cpp"
 				>
 			</File>
@@ -189,6 +193,10 @@
 			>
 			<File
 				RelativePath=".\Client.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Division.h"
 				>
 			</File>
 			<File
