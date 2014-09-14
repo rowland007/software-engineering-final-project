@@ -273,7 +273,6 @@ void Control::searchViewAllEmployeesControl()
 	int choice = 0;
 
 	clearScreen();
-	//GOTO searchEmployeeControl() || viewAllEmployeesControl()
 	while(!isCorrect)
 	{
 		searchEmployeeMenu();
@@ -325,8 +324,48 @@ void Control::searchEmployeeControl()
  ************************************************************************/
 void Control::viewAllEmployeesControl()
 {
-	clearScreen();
+	bool isCorrect = false;
+	int choice = 0;
 
+	clearScreen();
+	while(!isCorrect)
+	{
+		viewEmployeesFromDivision(divisionOne_->getDivisionName(), divisionTwo_->getDivisionName(), divisionThree_->getDivisionName());
+		cin >> choice;
+		switch(choice)
+		{
+		case 1:
+			clearScreen();
+			viewAllEmployees();
+			divisionOne_->printAllEmployeesWithinDivision();
+			isCorrect = true;
+			break;
+		case 2:
+			clearScreen();
+			viewAllEmployees();
+			divisionTwo_->printAllEmployeesWithinDivision();
+			isCorrect = true;
+			break;
+		case 3:
+			clearScreen();
+			viewAllEmployees();
+			divisionThree_->printAllEmployeesWithinDivision();
+			isCorrect = true;
+			break;
+		case 4:
+			clearScreen();
+			viewAllEmployees();
+			divisionOne_->printAllEmployeesWithinDivision();
+			divisionTwo_->printAllEmployeesWithinDivision();
+			divisionThree_->printAllEmployeesWithinDivision();
+			isCorrect = true;
+			break;
+		default:
+			clearScreen();
+			cout << "Invalid selection. Please try again." << endl;
+			break;
+		}
+	}
 	pause();
 	mainMenuControl();
 }
