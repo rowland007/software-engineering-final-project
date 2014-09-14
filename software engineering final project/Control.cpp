@@ -379,8 +379,41 @@ void Control::viewAllEmployeesControl()
  ************************************************************************/
 void Control::addNewClientControl()
 {
-	clearScreen();
+	string firstName = "John";
+	string lastName = "Doe";
+	string clientID = "JD335";
+	bool isCorrect = false;
 
+	clearScreen();
+	cout << "Enter new clients first name: ";
+	cin >> firstName;
+	cout << "Enter new clients last name: ";
+	cin >> lastName;
+
+	while(!isCorrect)
+	{
+		cout << "Enter a 5 character alpha numeric client code [EX123]: ";
+		cin >> clientID;
+		if(clientID.size() == 5)
+		{
+			isCorrect = true;
+		}
+		else
+		{
+			clearScreen();
+			cout << "Invalid client code! Please try again." << endl;
+		}
+	}
+
+	//Create client object
+	Client client(firstName, lastName);
+	client.setClientID(clientID);
+
+	//Push client into vector
+	client.addClient(client);
+
+	clearScreen();
+	cout << "Client successfully added." << endl;
 	pause();
 	mainMenuControl();
 }

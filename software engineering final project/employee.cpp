@@ -102,5 +102,5 @@ Employee::~Employee(void)
  ************************************************************************/
 void Employee::printFullName() const
 {
-	cout << "  " << getIdNum() << "         " << getLastName() << ", " << getFirstName() << endl;
+	cout << "  " << getIdNum() << "     " << getLastName() << ", " << getFirstName() << endl;
 }
