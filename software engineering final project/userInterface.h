@@ -22,7 +22,8 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
-10Sep2014  Corrected mainMenu() to display the correct company name
+10SEP2014	Corrected mainMenu() to display the correct company name.
+14SEP2014	Added divisionSelection and employeeSpecialty methods.
  ************************************************************************/
 #pragma once
 #include <iostream>
@@ -123,4 +124,38 @@ void viewAllClients()
 	cout << endl;
 	cout << "  ID Number     Last Name, First Name" << endl;
 	cout << " --------------------------------------------------------------------------" << endl;
+}
+
+void divisionSelection(string divisionOne, string divisionTwo, string divisionThree)
+{
+	cout << "***                   Add Employee to Division                          ***" << endl;
+	cout << "***************************************************************************" << endl;
+	cout << endl;
+	cout << "  Which division will this employee work at?" << endl;
+	cout << endl;
+	cout << "  1 - " << divisionOne << endl;
+	cout << endl;
+	cout << "  2 - " << divisionTwo << endl;
+	cout << endl;
+	cout << "  3 - " << divisionThree << endl;
+	cout << endl;
+	cout << "  Please enter your selection: ";
+}
+
+void employeeSpecialty()
+{
+	cout << "***                          Add Employee                               ***" << endl;
+	cout << "***************************************************************************" << endl;
+	cout << endl;
+	cout << "  Does any of the following apply to this employee?" << endl;
+	cout << endl;
+	cout << "  1 - Regular Employee [No Special Qualifications]" << endl;
+	cout << endl;
+	cout << "  2 - Secure Employee" << endl;
+	cout << endl;
+	cout << "  3 - Support Employee" << endl;
+	cout << endl;
+	cout << "  9 - Division Supervisior" << endl;
+	cout << endl;
+	cout << "  Please enter your selection: ";
 }

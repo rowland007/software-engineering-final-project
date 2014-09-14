@@ -22,6 +22,9 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
+14SEP2014	Added a client vector to store clients.
+			Added addClient to push object into vector.
+			Added printAllClients to display objects within vector.
  ************************************************************************/
 #include <iostream>
 #include <string>
@@ -76,4 +79,26 @@ Client::~Client(void)
 void Client::printFullName() const
 {
 	cout << "  " << getClientID() << "  " << getLastName() << ", " << getLastName() << endl;
+}
+
+ /************************************************************************
+   Function: addClient()
+   Author: Randall D. Rowland Jr.
+   Description:	This adds a client object to the vector.
+ ************************************************************************/
+void Client::addClient(Client client)
+{
+	clients_.push_back(client);
+}
+
+ /************************************************************************
+   Function: printAllClients()
+   Author: Randall D. Rowland Jr.
+   Description:	Prints all clients within the vector using an iterator.
+ ************************************************************************/
+void Client::printAllClients() const
+{	
+	vector< Client >::const_iterator tempIterator;
+	for(tempIterator = clients_.begin(); tempIterator != clients_.end(); ++tempIterator)
+		(*tempIterator).printFullName();
 }

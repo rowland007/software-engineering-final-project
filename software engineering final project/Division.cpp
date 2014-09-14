@@ -73,9 +73,7 @@ void Division::addEmployeeToDivision(SpecializedEmployee employee)
  /************************************************************************
    Function: setDivisionSupervisor()
    Author: Randall D. Rowland Jr.
-   Description:	As soon as the SpecializedEmployee is added to the vector
-				with Division Supervisor status. Call this method to have
-				the last element of the vector set as Division Supervisor.
+   Description:	Prints all employees within the vector using an iterator.
  ************************************************************************/
 void Division::printAllEmployeesWithinDivision() const
 {	
@@ -83,6 +81,7 @@ void Division::printAllEmployeesWithinDivision() const
 	for(tempIterator = employees_.begin(); tempIterator != employees_.end(); ++tempIterator)
 		(*tempIterator).printFullName();
 }
+
  /************************************************************************
    Function: setDivisionSupervisor()
    Author: Randall D. Rowland Jr.

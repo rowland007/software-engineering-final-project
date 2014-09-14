@@ -22,9 +22,13 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
+14SEP2014	Added a client vector to store clients.
+			Added addClient to push object into vector.
+			Added printAllClients to display objects within vector.
  ************************************************************************/
 #pragma once
 #include <string>
+#include <vector>
 #include "Person.h"
 
 class Client : 	public Person
@@ -33,10 +37,13 @@ public:
 	Client(const string &, const string &);
 	void setClientID(string);
 	string getClientID() const;
+	void addClient(Client);
+	void printAllClients() const;
 	~Client(void);
 
 	//Virtual functions to be overriden
 	virtual void printFullName() const;
 private:
 	string clientID_;
+	vector< Client > clients_;
 };
