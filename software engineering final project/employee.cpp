@@ -2,7 +2,7 @@
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
    Class: Employee
-   Instructor:
+   Instructor: Dr. Rhonda G. Chicone
    Date: 7 September 2014
    Description:	Class to create an employee inherited from the Person class.
 				This will give you First Name, Last Name, an Employee ID

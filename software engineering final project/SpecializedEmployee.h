@@ -2,7 +2,7 @@
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
    Class: SpecializedEmployee
-   Instructor:
+   Instructor: Dr. Rhonda G. Chicone
    Date: 13 September 2014
    Description:	This class stores the status of employees if they are
 				an employee with a security level, support employee, or

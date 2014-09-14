@@ -2,7 +2,7 @@
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
    Class: Person
-   Instructor:
+   Instructor: Dr. Rhonda G. Chicone
    Date: 7 September 2014
    Description:	This class creates objects that will hold the first and 
 				last name of a person. Also includes a virtual function

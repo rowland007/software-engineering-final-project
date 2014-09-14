@@ -2,7 +2,7 @@
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
    Class: 
-   Instructor:
+   Instructor: Dr. Rhonda G. Chicone
    Date: 9 September 2014
    Description: These are all void functions. All userInterface does is create
 				the menus needed to request commands from the user. There is 

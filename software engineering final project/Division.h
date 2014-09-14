@@ -2,9 +2,12 @@
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
    Class: Division
-   Instructor:
+   Instructor: Dr. Rhonda G. Chicone
    Date: 13 September 2014
-   Description:	
+   Description:	Class that creates a business division. Used to store emloyees
+				of that division without limits on the size. Stores the
+				division supervisor that is within one of the employees. Also
+				holds the division's revenue.
    Input:
    Output: 
    Compilation instructions:
@@ -28,11 +31,13 @@
 class Division
 {
 public:
-	Division(void);
+	Division(const string &);
 	void setDivisionName(string);
 	string getDivisionName() const;
+	void addEmployeeToDivision(SpecializedEmployee);
+	void printAllEmployeesWithinDivision() const;
 	void setDivisionSupervisor();
-	SpecializedEmployee getDivisionSupervisor() const;
+	SpecializedEmployee* getDivisionSupervisor() const;
 	void setRevenue(double);
 	double getRevenue() const;
 	~Division(void);

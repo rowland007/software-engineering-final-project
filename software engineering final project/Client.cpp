@@ -2,7 +2,7 @@
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
    Class: Client
-   Instructor:
+   Instructor: Dr. Rhonda G. Chicone
    Date: 13 September 2014
    Description:	Class to create a client inherited from the Person class.
 				This will give you First Name, Last Name, a Client ID Code
