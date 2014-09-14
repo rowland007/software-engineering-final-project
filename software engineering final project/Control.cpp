@@ -269,9 +269,35 @@ void Control::addNewEmployeeControl()
  ************************************************************************/
 void Control::searchViewAllEmployeesControl()
 {
-	clearScreen();
+	bool isCorrect = false;
+	int choice = 0;
 
+	clearScreen();
 	//GOTO searchEmployeeControl() || viewAllEmployeesControl()
+	while(!isCorrect)
+	{
+		searchEmployeeMenu();
+		cin >> choice;
+		switch(choice)
+		{
+		case 1:
+			searchEmployeeControl();
+			isCorrect = true;
+			break;
+		case 2:
+			viewAllEmployeesControl();
+			isCorrect = true;
+			break;
+		case 9:
+			mainMenuControl();
+			isCorrect = true;
+			break;
+		default:
+			clearScreen();
+			cout << "Invalid selection. Try again. " << endl;
+			break;
+		}
+	}
 }
 
  /************************************************************************
