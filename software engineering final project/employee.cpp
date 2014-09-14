@@ -39,6 +39,9 @@
  ************************************************************************/
 Employee::Employee(const string &first, const string &last) : Person(first, last)
 {
+	//Used to prevent an inconsitent state.
+	idNum_ = 0;
+	hireDate_ = 19700101;
 }
 
  /************************************************************************

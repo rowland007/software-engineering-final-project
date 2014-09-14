@@ -34,6 +34,9 @@
  ************************************************************************/
 Division::Division(const string &name) : divisionName_(name)
 {
+	//Used to prevent an inconsistent state.
+	revenue_ = 0;
+	isThereCurrentSupervisor_ = false;
 }
 
  /************************************************************************

@@ -34,6 +34,12 @@
  ************************************************************************/
 SpecializedEmployee::SpecializedEmployee(const string &first, const string &last) : Employee(first, last)
 {
+	//Used to prevent an inconsistent state.
+	isDivisionSupervisor_ = false;
+	isSecureEmployee_ = false;
+	isSupportEmployee_ = false;
+	securityLevel_ = false;
+	phoneNumber_ = 5555555555;
 }
 
  /************************************************************************

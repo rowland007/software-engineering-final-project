@@ -20,11 +20,16 @@ int main()
 	string SECOND_DIVISION = "Fiber Optics";
 	string THIRD_DIVISION = "Fluid Delivery Systems";
 	Division robotics(FIRST_DIVISION);
+	robotics.setIsThereCurrentSupervisor(false);
 	Division fiberOptics(SECOND_DIVISION);
 	Division fluidDeliverySystems(THIRD_DIVISION);
 
-	cout << "There are 3 Divisions: " << robotics.getDivisionName() << ", " << fiberOptics.getDivisionName() << ", & " << fluidDeliverySystems.getDivisionName() << endl;
+	cout << "There are 3 Divisions: " << robotics.getDivisionName() << ", " << fiberOptics.getDivisionName() 
+								<< ", & " << fluidDeliverySystems.getDivisionName() << endl << endl << endl;
 	
+	for(int i = 0; i < 3; i++)
+	{
+		cout << "Counter: " << i << endl;
 		cout << "Create Employee! Enter ID Num: ";
 		cin >> c_id;
 		cout << "Enter First Name: ";
@@ -51,8 +56,8 @@ int main()
 		else
 		{
 			employee.setIsDivisionSupervisor(false);
-			robotics.setIsThereCurrentSupervisor(false);
 		}
+	}
 
 	robotics.setRevenue(34890.50);
 
