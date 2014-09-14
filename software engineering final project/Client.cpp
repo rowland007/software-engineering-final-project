@@ -78,5 +78,5 @@ Client::~Client(void)
  ************************************************************************/
 void Client::printFullName() const
 {
-	cout << "  " << getClientID() << "  " << getLastName() << ", " << getLastName() << endl;
+	cout << "  " << getClientID() << "         " << getLastName() << ", " << getFirstName() << endl;
 }
