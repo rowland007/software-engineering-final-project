@@ -24,8 +24,7 @@ int main()
 	Division fluidDeliverySystems(THIRD_DIVISION);
 
 	cout << "There are 3 Divisions: " << robotics.getDivisionName() << ", " << fiberOptics.getDivisionName() << ", & " << fluidDeliverySystems.getDivisionName() << endl;
-	for(int i = 0; i <= 4; i++)
-	{
+	
 		cout << "Create Employee! Enter ID Num: ";
 		cin >> c_id;
 		cout << "Enter First Name: ";
@@ -42,18 +41,25 @@ int main()
 		robotics.addEmployeeToDivision(employee);
 
 		cout << "Is this employee a Division Supervisor? (Y or N)" << endl;
-		cin.get(answer);
+		cin >> answer;
 		if(answer == 'Y')
 		{
 			employee.setIsDivisionSupervisor(true);
 			robotics.setDivisionSupervisor();
+			robotics.setIsThereCurrentSupervisor(true);
 		}
-		cin.sync();
-	}
+		else
+		{
+			employee.setIsDivisionSupervisor(false);
+			robotics.setIsThereCurrentSupervisor(false);
+		}
 
 	robotics.setRevenue(34890.50);
 
-	cout << robotics.getDivisionName() << " Division Supervisor: " << robotics.getDivisionSupervisor()->getFirstName() << " " << robotics.getDivisionSupervisor()->getLastName() << endl;
+	if(robotics.getIsThereCurrentSupervisor())
+	{
+		cout << robotics.getDivisionName() << " Division Supervisor: " << robotics.getDivisionSupervisor()->getFirstName() << " " << robotics.getDivisionSupervisor()->getLastName() << endl << endl;
+	}
 	viewAllEmployees();
 	robotics.printAllEmployeesWithinDivision();
 	cout << endl << "REVENUE: $" << robotics.getRevenue();

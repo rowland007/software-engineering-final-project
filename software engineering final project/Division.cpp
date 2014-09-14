@@ -22,6 +22,7 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
+13SEP2014	Added set/get IsThereCurrentSupervisor methods.
  ************************************************************************/
 #include "Division.h"
 
@@ -88,7 +89,7 @@ void Division::printAllEmployeesWithinDivision() const
  ************************************************************************/
 void Division::setDivisionSupervisor()
 {
-	divisionSupervisor_ = &(employees_[employees_.size()]);
+	divisionSupervisor_ = &(employees_[employees_.size() - 1]);
 }
 
  /************************************************************************
@@ -123,6 +124,26 @@ double Division::getRevenue() const
 	return revenue_;
 }
 
+ /************************************************************************
+   Function: setIsThereCurrentSupervisor()
+   Author: Randall D. Rowland Jr.
+   Description:	Assigns the value of the parameter to the class variable.
+   @param	isSupervision		The value that is assigned to the class variable.
+ ************************************************************************/
+void Division::setIsThereCurrentSupervisor(bool isSupervision)
+{
+	isThereCurrentSupervisor_ = isSupervision;
+}
+
+ /************************************************************************
+   Function: getIsThereCurrentSupervisor()
+   Author: Randall D. Rowland Jr.
+   Description:	Returns the value of the class variable.
+ ************************************************************************/
+bool Division::getIsThereCurrentSupervisor() const
+{
+	return isThereCurrentSupervisor_;
+}
  /************************************************************************
    Function: Client()
    Author: Randall D. Rowland Jr.

@@ -25,6 +25,7 @@
 10SEP2014	Constructor now passes to person constructor.
 			Added virtual method functionality.
 13SEP2014	Modified variable names to follow coding guideline standards.
+			Fixed printFullName method. Was printing two last names.
  ************************************************************************/
 #include <iostream>
 #include "Employee.h"
@@ -98,5 +99,5 @@ Employee::~Employee(void)
  ************************************************************************/
 void Employee::printFullName() const
 {
-	cout << "  " << getIdNum() << "  " << getLastName() << ", " << getLastName() << endl;
+	cout << "  " << getIdNum() << "         " << getLastName() << ", " << getFirstName() << endl;
 }

@@ -40,10 +40,13 @@ public:
 	SpecializedEmployee* getDivisionSupervisor() const;
 	void setRevenue(double);
 	double getRevenue() const;
+	void setIsThereCurrentSupervisor(bool);
+	bool getIsThereCurrentSupervisor() const;
 	~Division(void);
 private:
 	string divisionName_;
 	vector< SpecializedEmployee > employees_;
 	double revenue_;
 	SpecializedEmployee* divisionSupervisor_;
+	bool isThereCurrentSupervisor_;
 };
