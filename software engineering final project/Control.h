@@ -25,11 +25,12 @@
  ************************************************************************/
 #pragma once
 #include "Division.h"
+#include "ClientVector.h"
 
 class Control
 {
 public:
-	Control(Division*, Division*, Division*);
+	Control(Division*, Division*, Division*, ClientVector*);
 	void mainMenuControl();
 	void addNewEmployeeControl();
 	void searchViewAllEmployeesControl();
@@ -45,4 +46,5 @@ private:
 	Division* divisionOne_;
 	Division* divisionTwo_;
 	Division* divisionThree_;
+	ClientVector* client_;
 };

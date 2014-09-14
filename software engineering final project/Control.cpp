@@ -30,6 +30,7 @@
 #include "Client.h"
 #include "SpecializedEmployee.h"
 #include "Division.h"
+#include "ClientVector.h"
 
 using namespace std;
 
@@ -38,11 +39,12 @@ using namespace std;
    Author: Randall D. Rowland Jr.
    Description: Auto-generated constructor.
  ************************************************************************/
-Control::Control(Division *divisionOne, Division *divisionTwo, Division *divisionThree)
+Control::Control(Division *divisionOne, Division *divisionTwo, Division *divisionThree, ClientVector *clients)
 {
 	divisionOne_ = divisionOne;
 	divisionTwo_ = divisionTwo;
 	divisionThree_ = divisionThree;
+	client_ = clients;
 }
 
  /************************************************************************
@@ -410,7 +412,7 @@ void Control::addNewClientControl()
 	client.setClientID(clientID);
 
 	//Push client into vector
-	client.addClient(client);
+	client_->addClient(client);
 
 	clearScreen();
 	cout << "Client successfully added." << endl;
@@ -482,7 +484,8 @@ void Control::searchClientControl()
 void Control::viewAllClientControl()
 {
 	clearScreen();
-
+	viewAllClients();
+	client_->printAllClients();
 	pause();
 	mainMenuControl();
 }

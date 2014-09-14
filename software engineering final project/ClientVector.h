@@ -1,13 +1,11 @@
  /************************************************************************
    Program: Software Engineering Final Project
    Author: Randall D. Rowland Jr.
-   Class: Client
+   Class: ClientVector
    Instructor: Dr. Rhonda G. Chicone
-   Date: 13 September 2014
-   Description:	Class to create a client inherited from the Person class.
-				This will give you First Name, Last Name, a Client ID Code
-				Virtual function is overriden to provide: 
-				"ID Code  LastName, FirstName".
+   Date: 14 September 2014
+   Description:	Class to create a client vector to hold all the client
+				objects.
    Input:
    Output: 
    Compilation instructions:
@@ -22,25 +20,20 @@
    Modifications:
    Date                Comment            
    ----    ------------------------------------------------
-14SEP2014	Added a client vector to store clients.
-			Added addClient to push object into vector.
-			Added printAllClients to display objects within vector.
-			Removed client vector and moved it to ClientVector class.
  ************************************************************************/
 #pragma once
+#include <vector>
 #include <string>
-#include "Person.h"
+#include "Client.h"
 
-class Client : 	public Person
+class ClientVector
 {
 public:
-	Client(const string &, const string &);
-	void setClientID(string);
-	string getClientID() const;
-	~Client(void);
-
-	//Virtual functions to be overriden
-	virtual void printFullName() const;
+	ClientVector(const string &);
+	void addClient(Client);
+	void printAllClients() const;
+	~ClientVector(void);
 private:
-	string clientID_;
+	string vectorName_;
+	vector< Client > clients_;
 };

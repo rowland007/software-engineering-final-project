@@ -166,6 +166,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\ClientVector.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Control.cpp"
 				>
 			</File>
@@ -197,6 +201,10 @@
 			>
 			<File
 				RelativePath=".\Client.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ClientVector.h"
 				>
 			</File>
 			<File
