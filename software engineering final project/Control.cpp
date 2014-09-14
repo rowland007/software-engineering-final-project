@@ -38,8 +38,11 @@ using namespace std;
    Author: Randall D. Rowland Jr.
    Description: Auto-generated constructor.
  ************************************************************************/
-Control::Control()
+Control::Control(Division *divisionOne, Division *divisionTwo, Division *divisionThree)
 {
+	divisionOne_ = divisionOne;
+	divisionTwo_ = divisionTwo;
+	divisionThree_ = divisionThree;
 }
 
  /************************************************************************
@@ -68,10 +71,10 @@ void Control::mainMenuControl()
 		addNewClientControl();
 		break;
 	case 4:
-		searchViewAllClientsControl();
+		searchViewAllClientControl();
 		break;
 	case 9:
-		exit 0;
+		exit(0);
 	default:
 		cout << "Invalid Selection!" << endl;
 		pause();
@@ -207,8 +210,53 @@ void Control::addNewEmployeeControl()
 		}
 	}
 
-	//Push employee into a divison vector
+	//Reset control flag
+	isCorrect = false;
 
+	//Push employee into a divison vector
+	clearScreen();
+	while(!isCorrect)
+	{
+		divisionSelection(divisionOne_->getDivisionName(), divisionTwo_->getDivisionName(), divisionThree_->getDivisionName());
+		cin >> choice;
+		switch(choice)
+		{
+		case 1:
+			divisionOne_->addEmployeeToDivision(employee);
+			if(employee.getIsDivisionSupervisor())
+			{
+				divisionOne_->setDivisionSupervisor();
+				divisionOne_->setIsThereCurrentSupervisor(true);
+			}
+			isCorrect = true;
+			break;
+		case 2:
+			divisionTwo_->addEmployeeToDivision(employee);
+			if(employee.getIsDivisionSupervisor())
+			{
+				divisionTwo_->setDivisionSupervisor();
+				divisionTwo_->setIsThereCurrentSupervisor(true);
+			}
+			isCorrect = true;
+			break;
+		case 3:
+			divisionThree_->addEmployeeToDivision(employee);
+			if(employee.getIsDivisionSupervisor())
+			{
+				divisionThree_->setDivisionSupervisor();
+				divisionThree_->setIsThereCurrentSupervisor(true);
+			}
+			isCorrect = true;
+			break;
+		default:
+			clearScreen();
+			cout << "Invalid selection. Please try again." << endl;
+			break;
+		}
+	}
+
+	//Employee should be created and added to a division vector by this point
+	cout << "Employee successfully added to system. Returning to main menu." << endl;
 	pause();
 	mainMenuControl();
 }

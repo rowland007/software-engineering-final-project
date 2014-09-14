@@ -24,20 +24,25 @@
    ----    ------------------------------------------------
  ************************************************************************/
 #pragma once
+#include "Division.h"
 
 class Control
 {
 public:
-	Control();
-	void mainMenuControl()
-	void addNewEmployeeControl()
-	void searchViewAllEmployeesControl()
-	void searchEmployeeControl()
-	void viewAllEmployeesControl()
-	void addNewClientControl()
-	void searchViewAllClientControl()
-	void searchClientControl()
-	void viewAllClientControl()
-	void pause()
+	Control(Division*, Division*, Division*);
+	void mainMenuControl();
+	void addNewEmployeeControl();
+	void searchViewAllEmployeesControl();
+	void searchEmployeeControl();
+	void viewAllEmployeesControl();
+	void addNewClientControl();
+	void searchViewAllClientControl();
+	void searchClientControl();
+	void viewAllClientControl();
+	void pause();
 	~Control(void);
+private:
+	Division* divisionOne_;
+	Division* divisionTwo_;
+	Division* divisionThree_;
 };

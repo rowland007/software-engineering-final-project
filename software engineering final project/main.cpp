@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Control.h"
+#include "Division.h"
 
 using namespace std;
 
@@ -15,7 +16,9 @@ int main()
 	Division fiberOptics(SECOND_DIVISION);
 	Division fluidDeliverySystems(THIRD_DIVISION);
 
-	mainMenuControl();
+	Control program(&robotics, &fiberOptics, &fluidDeliverySystems);
+
+	program.mainMenuControl();
 	
 	return 0;
 }
