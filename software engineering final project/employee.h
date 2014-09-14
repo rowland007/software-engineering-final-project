@@ -33,8 +33,8 @@ class Employee : public Person
 {
 public:
 	Employee(const string &, const string &);
-	void setIdNum(int);
-	int getIdNum() const;
+	void setIdNum(unsigned long long int);
+	unsigned long long int getIdNum() const;
 	void setHireDate(int);
 	int getHireDate() const;
 	~Employee(void);
@@ -42,6 +42,6 @@ public:
 	//Virtual functions to be overriden
 	virtual void printFullName() const;
 private:
-	unsigned int idNum_;
+	unsigned long long int idNum_;
 	unsigned int hireDate_;
 };

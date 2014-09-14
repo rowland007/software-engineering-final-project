@@ -166,6 +166,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Control.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Division.cpp"
 				>
 			</File>

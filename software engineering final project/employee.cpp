@@ -50,7 +50,7 @@ Employee::Employee(const string &first, const string &last) : Person(first, last
    Description: Assigns the value from the parameter to the class variable.
    @param	id		The actual value to be stored in the class variable.    
  ************************************************************************/
-void Employee::setIdNum(int id)
+void Employee::setIdNum(unsigned long long int id)
 {
 		idNum_ = id;
 }
@@ -60,7 +60,7 @@ void Employee::setIdNum(int id)
    Author: Randall D. Rowland Jr.
    Description: Returns the value stored within the class variable.    
  ************************************************************************/
-int Employee::getIdNum() const
+unsigned long long int Employee::getIdNum() const
 {
 	return idNum_;
 }

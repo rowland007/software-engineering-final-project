@@ -26,6 +26,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Control.h"
 #include "UserInterface.h"
 #include "Client.h"
 #include "SpecializedEmployee.h"
