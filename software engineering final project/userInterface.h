@@ -159,3 +159,21 @@ void employeeSpecialty()
 	cout << endl;
 	cout << "  Please enter your selection: ";
 }
+
+void viewEmployeesFromDivision(string divisionOne, string divisionTwo, string divisionThree)
+{
+	cout << "***               Display All Employees by Division                     ***" << endl;
+	cout << "***************************************************************************" << endl;
+	cout << endl;
+	cout << "  Which division do you want to view all employees for?" << endl;
+	cout << endl;
+	cout << "  1 - " << divisionOne << endl;
+	cout << endl;
+	cout << "  2 - " << divisionTwo << endl;
+	cout << endl;
+	cout << "  3 - " << divisionThree << endl;
+	cout << endl;
+	cout << "  4 - All Divisions" << endl;
+	cout << endl;
+	cout << "  Please enter your selection: ";
+}
