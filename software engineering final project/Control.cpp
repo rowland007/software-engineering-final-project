@@ -23,7 +23,6 @@
    Date                Comment            
    ----    ------------------------------------------------
  ************************************************************************/
-#pragma once
 #include <iostream>
 #include <string>
 #include "Control.h"
@@ -35,13 +34,22 @@
 using namespace std;
 
  /************************************************************************
+   Function: Control()
+   Author: Randall D. Rowland Jr.
+   Description: Auto-generated constructor.
+ ************************************************************************/
+Control::Control()
+{
+}
+
+ /************************************************************************
    Function: mainMenuControl()
    Author: Randall D. Rowland Jr.
    Description: This is the main control. From you it will take you to
 				other menu controls or you can exit the program. All other
 				control will eventually return here.
  ************************************************************************/
-void mainMenuControl()
+void Control::mainMenuControl()
 {	
 	int choice;
 
@@ -51,10 +59,10 @@ void mainMenuControl()
 	switch(choice)
 	{
 	case 1:
-		Control::addNewEmployeeControl();
+		addNewEmployeeControl();
 		break;
 	case 2:
-		Control::searchViewAllEmployeesControl();
+		searchViewAllEmployeesControl();
 		break;
 	case 3:
 		addNewClientControl();
@@ -79,7 +87,7 @@ void mainMenuControl()
 				pushs it into a division vector based upon selection. Then 
 				returns you to the main menu.    
  ************************************************************************/
-void addNewEmployeeControl()
+void Control::addNewEmployeeControl()
 {	
 	//Setup local vairables and initialize them to keep a consistant state.
 	string firstName = "John";
@@ -211,7 +219,7 @@ void addNewEmployeeControl()
    Description: Displays menu and control which employee menu to take you 
 				to next depending on selection.    
  ************************************************************************/
-void searchViewAllEmployeesControl()
+void Control::searchViewAllEmployeesControl()
 {
 	clearScreen();
 
@@ -226,7 +234,7 @@ void searchViewAllEmployeesControl()
 				format. After execution returns you to main menu to make 
 				another selection.    
  ************************************************************************/
-void searchEmployeeControl()
+void Control::searchEmployeeControl()
 {
 	clearScreen();
 
@@ -241,7 +249,7 @@ void searchEmployeeControl()
 				displays all employees. After complete it returns you to 
 				the main menu to make more selections.    
  ************************************************************************/
-void viewAllEmployeesControl()
+void Control::viewAllEmployeesControl()
 {
 	clearScreen();
 
@@ -256,7 +264,7 @@ void viewAllEmployeesControl()
 				in the correct format. After new client is created it pushs
 				it into the vector. Then returns you to the main menu.
  ************************************************************************/
-void addNewClientControl()
+void Control::addNewClientControl()
 {
 	clearScreen();
 
@@ -270,7 +278,7 @@ void addNewClientControl()
    Description: Displays menu and control which client menu to take you to
 				next depending on selection.
  ************************************************************************/
-void searchViewAllClientControl()
+void Control::searchViewAllClientControl()
 {
 	clearScreen();
 
@@ -285,7 +293,7 @@ void searchViewAllClientControl()
 				After execution returns you to main menu to make another
 				selection.
  ************************************************************************/
-void searchClientControl()
+void Control::searchClientControl()
 {
 	clearScreen();
 
@@ -300,7 +308,7 @@ void searchClientControl()
 				displays all clients. After complete it returns you to the
 				main menu to make more selections.
  ************************************************************************/
-void viewAllClientControl()
+void Control::viewAllClientControl()
 {
 	clearScreen();
 
@@ -315,9 +323,18 @@ void viewAllClientControl()
 				pauses the system and waits for any key press before you
 				can continue execution.
  ************************************************************************/
-void pause()
+void Control::pause()
 {
 	cin.sync();
 	cin.ignore();
 	system("PAUSE");	//Using system is bad but right now we're in a hurry.
+}
+
+ /************************************************************************
+   Function: ~Control()
+   Author: Randall D. Rowland Jr.
+   Description: Auto-generated destructor.
+ ************************************************************************/
+Control::~Control(void)
+{
 }
