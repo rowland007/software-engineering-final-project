@@ -426,9 +426,34 @@ void Control::addNewClientControl()
  ************************************************************************/
 void Control::searchViewAllClientControl()
 {
-	clearScreen();
+	bool isCorrect = false;
+	int choice;
 
-	//GOTO searchClientControl || viewAllClientControl
+	clearScreen();
+	while(!isCorrect)
+	{
+		searchClientMenu();
+		cin >> choice;
+		switch(choice)
+		{
+		case 1:
+			searchClientControl();
+			isCorrect = true;
+			break;
+		case 2:
+			viewAllClientControl();
+			isCorrect = true;
+			break;
+		case 9:
+			mainMenuControl();
+			isCorrect = true;
+			break;
+		default:
+			clearScreen();
+			cout << "Invalid selection. Try again." << endl;
+			break;
+		}
+	}
 }
 
  /************************************************************************
