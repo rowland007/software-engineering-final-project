@@ -31,6 +31,8 @@ class ClientVector
 public:
 	ClientVector(const string &);
 	void addClient(Client);
+	bool isClientFound(const string);
+	void printFullClient(const string);
 	void printAllClients() const;
 	~ClientVector(void);
 private:

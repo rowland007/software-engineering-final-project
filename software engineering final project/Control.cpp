@@ -468,8 +468,49 @@ void Control::searchViewAllClientControl()
  ************************************************************************/
 void Control::searchClientControl()
 {
-	clearScreen();
+	const string EXIT ("9");
+	string choice;
+	bool isCorrect = false;
 
+	clearScreen();
+	while(!isCorrect)
+	{
+		searchClientByID();
+		cin >> choice;
+		if(choice.compare(EXIT) == 0)	//Exit first if possible
+		{	
+			isCorrect = true;
+			mainMenuControl();
+		}
+		else
+		{
+			if(choice.size() == 5)		//Make sure search key is 5 chars long
+			{	
+				//If found display information.
+				if(client_->isClientFound(choice))
+				{
+					viewAllClients();
+					client_->printFullClient(choice);
+					isCorrect = true;
+				}
+				//If not found let them know and return to main menu.
+				else
+				{	
+					clearScreen();
+					cout << "Client not found. Check your Client ID Code." << endl;
+					cout << "Return to main menu." << endl;
+					pause();
+					mainMenuControl();
+				}
+			}
+			else
+			{
+				//Search key wasn't 5 chars long.
+				clearScreen();
+				cout << "Search for Client with 5 Character Code. Please try again." << endl;
+			}
+		}
+	}
 	pause();
 	mainMenuControl();
 }

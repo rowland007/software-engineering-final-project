@@ -47,6 +47,32 @@ void ClientVector::addClient(Client client)
    Author: Randall D. Rowland Jr.
    Description:	Prints all clients within the vector using an iterator.
  ************************************************************************/
+
+bool ClientVector::isClientFound(const string searchKey)
+{
+	vector< Client >::const_iterator tempIterator;
+	for(tempIterator = clients_.begin(); tempIterator != clients_.end(); ++tempIterator)
+	{
+		if((*tempIterator).getClientID().compare(searchKey) == 0)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+void ClientVector::printFullClient(const string searchKey)
+{
+	vector< Client >::const_iterator tempIterator;
+	for(tempIterator = clients_.begin(); tempIterator != clients_.end(); ++tempIterator)
+	{
+		if((*tempIterator).getClientID().compare(searchKey) == 0)
+		{
+			(*tempIterator).printFullName();
+		}
+	}
+}
+
 void ClientVector::printAllClients() const
 {	
 	vector< Client >::const_iterator tempIterator;
