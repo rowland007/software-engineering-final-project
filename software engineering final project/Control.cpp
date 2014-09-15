@@ -311,8 +311,39 @@ void Control::searchViewAllEmployeesControl()
  ************************************************************************/
 void Control::searchEmployeeControl()
 {
-	clearScreen();
+	unsigned long long int choice;
+	bool isCorrect = false;
 
+	clearScreen();
+	while(!isCorrect)
+	{
+		searchEmployeeByID();
+		cin >> choice;
+		if(choice == 9)	//Exit first if possible
+		{	
+			isCorrect = true;
+			mainMenuControl();
+		}
+		else
+		{
+			if(100000000 <= choice && choice <= 999999999)		//Make sure search key is 9 numbers long
+			{	
+				clearScreen();
+				cout << "Internal error or Employee not found. Check your Employee ID." << endl;
+				cout << "Return to main menu." << endl;
+				pause();
+				mainMenuControl();
+				
+				isCorrect = true;
+			}
+			else
+			{
+				//Search key wasn't 5 chars long.
+				clearScreen();
+				cout << "Search for Client with 5 Character Code. Please try again." << endl;
+			}
+		}
+	}
 	pause();
 	mainMenuControl();
 }
@@ -489,6 +520,7 @@ void Control::searchClientControl()
 				//If found display information.
 				if(client_->isClientFound(choice))
 				{
+					clearScreen();
 					viewAllClients();
 					client_->printFullClient(choice);
 					isCorrect = true;
